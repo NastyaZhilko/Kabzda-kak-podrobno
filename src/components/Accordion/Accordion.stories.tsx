@@ -19,8 +19,8 @@ export const UncollapsedMode = () => <Accordion titleValue={"Users"} collapsed={
                                                 }, {title: "Victor", value: 3}, {title: "Artem", value: 4}]}/>;
 export const ModeChanging = () => {
     const [value, setValue] = useState<boolean>(true)
-    return <Accordion titleValue={"Users"} collapsed={value} onChange={setValue} onClick={(id) => {
-        alert(`user with ID ${id} should be happy `)
+    return <Accordion titleValue={"Users"} collapsed={value} onChange={setValue} onClick={(value) => {
+        alert(`user with ID ${value} should be happy `)
     }} items={[{title: "Dimych", value: 1}, {title: "Valera", value: 2}, {
         title: "Victor",
         value: 3
