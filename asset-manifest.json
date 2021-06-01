@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Kabzda-kak-podrobno/static/css/main.383e7b95.chunk.css",
+    "main.js": "/Kabzda-kak-podrobno/static/js/main.a52f0161.chunk.js",
+    "main.js.map": "/Kabzda-kak-podrobno/static/js/main.a52f0161.chunk.js.map",
+    "runtime-main.js": "/Kabzda-kak-podrobno/static/js/runtime-main.63f562e2.js",
+    "runtime-main.js.map": "/Kabzda-kak-podrobno/static/js/runtime-main.63f562e2.js.map",
+    "static/js/2.ed45413c.chunk.js": "/Kabzda-kak-podrobno/static/js/2.ed45413c.chunk.js",
+    "static/js/2.ed45413c.chunk.js.map": "/Kabzda-kak-podrobno/static/js/2.ed45413c.chunk.js.map",
+    "index.html": "/Kabzda-kak-podrobno/index.html",
+    "precache-manifest.811aab0fc2aa04a996fd8378bffbb444.js": "/Kabzda-kak-podrobno/precache-manifest.811aab0fc2aa04a996fd8378bffbb444.js",
+    "service-worker.js": "/Kabzda-kak-podrobno/service-worker.js",
+    "static/css/main.383e7b95.chunk.css.map": "/Kabzda-kak-podrobno/static/css/main.383e7b95.chunk.css.map",
+    "static/js/2.ed45413c.chunk.js.LICENSE.txt": "/Kabzda-kak-podrobno/static/js/2.ed45413c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.63f562e2.js",
+    "static/js/2.ed45413c.chunk.js",
+    "static/css/main.383e7b95.chunk.css",
+    "static/js/main.a52f0161.chunk.js"
+  ]
+}
