@@ -6,14 +6,13 @@ export default {
 }
 
 
-
 const SimpleExample = () => {
     const [fake, setFake] = useState(1)
     const [counter, setCounter] = useState(1)
     console.log('SimpleExample')
-    useEffect(()=>{
+    useEffect(() => {
         console.log('UseEffect every render')
-        document.title=counter.toString()
+        document.title = counter.toString()
         //api.getUsers().then('') - запрос на сервер
         //setInterval - установка интервалов
         //indexDB - работа с базой данных
@@ -22,34 +21,54 @@ const SimpleExample = () => {
 
     })
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log('UseEffect only first render')
-        document.title=counter.toString()
+        document.title = counter.toString()
         //api.getUsers().then('') - запрос на сервер
         //setInterval - установка интервалов
         //indexDB - работа с базой данных
         //document.getElementById - обращение к документу
         //document.title - изменение тайтла документа
 
-    },[])
+    }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log('UseEffect first render and every counter change')
-        document.title=counter.toString()
+        document.title = counter.toString()
         //api.getUsers().then('') - запрос на сервер
         //setInterval - установка интервалов
         //indexDB - работа с базой данных
         //document.getElementById - обращение к документу
         //document.title - изменение тайтла документа
 
-    },[counter])
+    }, [counter])
 
     return <div>
 
         <button onClick={() => {
-            setCounter(fake+1)
+            setCounter(counter + 1)
+        }}>+1
+        </button>
+        <button onClick={() => {
+            setFake(fake + 1)
         }}>+1
         </button>
         Hello, {counter}
+    </div>
+}
+
+const SetTimeoutExample = () => {
+    const [counter, setCounter] = useState(1)
+    console.log('SetTimeoutExample')
+
+    useEffect(() => {
+        setInterval(() => {
+            setCounter((state=>state+1))
+        })
+    }, [counter])
+
+    return <div>
+        Hello,
+        counter: {counter}
     </div>
 }
