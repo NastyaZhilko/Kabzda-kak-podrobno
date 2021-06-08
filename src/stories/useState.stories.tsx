@@ -11,7 +11,7 @@ function generateData() {
 
 const Example1 = () => {
 
-    const [counter, setCounter] = useState(generateData)//[0, function(newValue){} - это функция setCounter]
+    const [counter, setCounter] = useState(generateData)
 
     return <div>
         <button onClick={() => {

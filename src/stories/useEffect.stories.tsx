@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import {log} from "util";
 
 export default {
     title: 'useEffect demo'
@@ -24,23 +23,11 @@ const SimpleExample = () => {
     useEffect(() => {
         console.log('UseEffect only first render')
         document.title = counter.toString()
-        //api.getUsers().then('') - запрос на сервер
-        //setInterval - установка интервалов
-        //indexDB - работа с базой данных
-        //document.getElementById - обращение к документу
-        //document.title - изменение тайтла документа
-
     }, [])
 
     useEffect(() => {
         console.log('UseEffect first render and every counter change')
         document.title = counter.toString()
-        //api.getUsers().then('') - запрос на сервер
-        //setInterval - установка интервалов
-        //indexDB - работа с базой данных
-        //document.getElementById - обращение к документу
-        //document.title - изменение тайтла документа
-
     }, [counter])
 
     return <div>
@@ -63,12 +50,33 @@ const SetTimeoutExample = () => {
 
     useEffect(() => {
         setInterval(() => {
-            setCounter((state=>state+1))
+            setCounter((state => state + 1))
         })
     }, [counter])
 
     return <div>
         Hello,
         counter: {counter}
+    </div>
+}
+
+const ResetEffectExample = () => {
+    const [counter, setCounter] = useState(1)
+    console.log('SetTimeoutExample')
+
+    useEffect(() => {
+        console.log('useEffect occurred')
+        return () =>{
+            console.log('RESET EFFECT')
+        }
+    }, [])
+    const increase = () => setCounter(counter + 1)
+
+    return <div>
+        Hello,
+        counter: {counter}
+        <button onClick={increase}>
+            +
+        </button>
     </div>
 }
